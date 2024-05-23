@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  // ESTA CLASE YA TIENE ANOTACIONES- @Component es una anotacion, 
+  // hace que el header sea una clase que gestiona un componente
 }
