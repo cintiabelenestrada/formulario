@@ -1,0 +1,18 @@
+<button type="button" id="traducir" (click)="obtenerLenguajes()">Obtener Lenguajes</button>
+
+<form>
+    <label for="source">Idioma Origen</label>
+    <input type="text" id="source" name="source" value="" [(ngModel)]="source">
+
+    <label for="texto">Texto a Traducir:</label>
+    <input type="text" id="texto" name="texto" value="" [(ngModel)]="texto">
+
+    <label for="target">Idioma Destiono:</label>
+    <input type="text" id="target" name="target" value="" [(ngModel)]="target">
+
+    <label for="textoTraducido">Texto Traducido:</label>
+    <input type="text" id="texto" name="textoTraducido" value="" [(ngModel)]="textoTraducido">
+
+    <button type="button" id="traducir" (click)="traducirTexto()">Traducir</button>
+
+</form>
