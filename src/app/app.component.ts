@@ -13,5 +13,5 @@ import { PortalDeNoticiasComponent } from './components/portalNoticias/portal-de
     imports: [RouterOutlet, HeaderComponent, FooterComponent, TranslateComponent, PortalDeNoticiasComponent]
 })
 export class AppComponent {
-  title = 'formulario';
+  title = 'web-service';
 }

@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { TranslateComponent } from './components/translate/translate.component';
+import { PortalDeNoticiasComponent } from './components/portalNoticias/portal-de-noticias.component';
 
 export const routes: Routes = [
 
@@ -9,6 +10,6 @@ export const routes: Routes = [
     },
     {
         path: 'noticias', 
-        component: TranslateComponent,
+        component: PortalDeNoticiasComponent,
     }
 ];
