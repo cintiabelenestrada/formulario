@@ -6,7 +6,7 @@ export const routes: Routes = [
     {
         path: 'translate', 
         component: TranslateComponent,
-    }
+    },
     {
         path: 'noticias', 
         component: TranslateComponent,

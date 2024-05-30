@@ -15,9 +15,9 @@ export class PortalNoticiasComponent {
 
   homepageArticles: interfaceArticles[]= [];
 
-  constructor(private portalNoticiasService: PortalNoticiasService) {}
+  constructor(private portalNoticias: PortalNoticiasService) {}
   mostrarDatosDeApi() {
-    this.portalNoticiasService.getObtenerNoticias().subscribe(
+    this.portalNoticias.getObtenerNoticias().subscribe(
       (data: any) => {
         // Categorias de noticias
         this.categorias = data.categories;
