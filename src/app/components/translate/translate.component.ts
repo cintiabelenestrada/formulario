@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateService } from '../../services/translate.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TranslateModel } from '../../models/TranslateModel';
 
 @Component({
   selector: 'app-translate',
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './translate.component.css'
 })
 export class TranslateComponent {
+  lenguajes!: TranslateModel;
   texto:string = "";
   source:string = "";
   target:string = "";
@@ -21,9 +23,10 @@ export class TranslateComponent {
   }
 
   obtenerLenguajes(){
-    this.translateService.getLanguajes().subscribe(
+    this.translateService.getObtenerLanguajes().subscribe(
       (data:any) => {
-      console.log(data);//data va a tener el lenguaje
+        this.lenguajes = data;
+      console.log("lenguajes data:",data);//data va a tener el lenguaje
       },
       (error:any) => {
         console.log(error);
