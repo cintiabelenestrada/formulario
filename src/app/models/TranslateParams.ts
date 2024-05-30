@@ -3,7 +3,7 @@ export class TranslateParams {
     target: string;
     q: string;
   
-    constructor(source: string = 'en', target: string = 'es', q: string = '') {
+    constructor(source: string = ' ', target: string = '', q: string = '') {
       this.source = source;
       this.target = target;
       this.q = q;

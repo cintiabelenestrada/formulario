@@ -39,14 +39,14 @@ export class TranslateComponent {
   }
 
   traducirTexto(){
-  //   this.translateService.translateText(this.source, this.target, this.texto).subscribe(
-  //     (result: any) => {
-  //       console.log(result); //data va a tener la traduccion aqui
-  //       this.textoTraducido = result.data.translations[0].translateText;
-  //     },
-  //     (error:any) => {
-  //       console.log(error);
-  //     }
-  //   )
+    this.translateService.translateText(this.source, this.target, this.texto).subscribe(
+      (result: any) => {
+        console.log(result); //data va a tener la traduccion aqui
+        this.textoTraducido = result.data.translations[0].translatedText;
+      },
+      (error:any) => {
+        console.log(error);
+      }
+    )
   }
 }
