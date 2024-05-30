@@ -4,15 +4,15 @@
     <label for="source">Idioma Origen</label>
     <input type="text" id="source" name="source" value="" [(ngModel)]="source">
 
-    <label for="texto">Texto a Traducir:</label>
-    <input type="text" id="texto" name="texto" value="" [(ngModel)]="texto">
-
     <label for="target">Idioma Destiono:</label>
     <input type="text" id="target" name="target" value="" [(ngModel)]="target">
 
-    <label for="textoTraducido">Texto Traducido:</label>
-    <input type="text" id="texto" name="textoTraducido" value="" [(ngModel)]="textoTraducido">
+    <label for="texto">Texto a Traducir:</label>
+    <input type="text" id="texto" name="texto" value="" [(ngModel)]="texto">
 
     <button type="button" id="traducir" (click)="traducirTexto()">Traducir</button>
+    <label for="textoTraducido">Texto Traducido:</label>
+    <p class type="text" id="texto" value="" ></p>
+
 
 </form>
