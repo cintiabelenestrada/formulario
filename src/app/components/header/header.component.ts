@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+interface MenuItem {
+  label: string;
+  routerLink: string;
+}
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  // ESTA CLASE YA TIENE ANOTACIONES- @Component es una anotacion, 
-  // hace que el header sea una clase que gestiona un componente
+  menuItems: MenuItem[] = [
+    { label: 'Traductor', routerLink: 'traductor' },
+    { label: 'Noticias', routerLink: 'noticias' },
+    { label: 'Vehículos', routerLink: 'vehiculos' },
+  ];
 }

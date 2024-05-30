@@ -16,6 +16,11 @@ export class PortalDeNoticiasComponent {
   homepageArticles: interfaceArticles[]= [];
 
   constructor(private portalNoticias: PortalNoticiasService) {}
+  
+  ngOnInit(): void {
+    this.mostrarDatosDeApi();
+  }
+  
   mostrarDatosDeApi() {
     this.portalNoticias.getObtenerNoticias().subscribe(
       (data: any) => {
