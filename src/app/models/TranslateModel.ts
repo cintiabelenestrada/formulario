@@ -1,12 +1,11 @@
 export class TranslateModel {
-  data!: Data;
+  data!: languages;
 }
 
-export class Data {
-  translations!: Translation[];
+export class languages {
+  languages!: languaje[];
 }
 
-export class Translation {
-  translatedText!: string;
-  detectedSourceLanguage!: string;
+export class languaje {
+  language!: string;
 }
