@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <section>
+        <button type="button" id="DireccionIp" name="DireccionIp" (click)="mostrarDatosDeApi()">mostrar</button>
+        <h1>Categorias de Noticia:</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gap-3 justify-content-center" >
+            @for (categoria of categorias; track $index){
+                <article class="bg-body-tertiary p-2 rounded d-flex flex-column justify-content-between">
+                    <h3 class="card-title">{{ categoria.seo.title }}</h3>
+                    <p class="card-text">{{ categoria.seo.description }}</p>
+                </article>
+            }
+        </div>
+        <h1>Noticias:</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gap-3 justify-content-center" >
+            @for (homepageArticle of homepageArticles; track $index){
+                @for (article of homepageArticle.articles; track $index) { 
+                    <article class="bg-body-tertiary p-2 rounded d-flex flex-column justify-content-between">
+                        <h2 class="card-title">{{ article.title }}</h2>
+                    
+                        @for (media of article.mainMedia; track $index) {
+                            <img class="card-img-top" src="{{ media.gallery.url }}">
+                        }
+                    </article>
+                }
+            }
+     
+        </div>
+    </section>
+</div>
+  
